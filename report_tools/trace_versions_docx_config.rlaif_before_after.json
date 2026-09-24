@@ -12,8 +12,8 @@
         "repo_path": "c:/projects/proposal/rlaif-harness-traces",
         "file_path": "TRACE_HISTORY.md",
         "git_ref": "trace-v1",
-        "start_line": 153,
-        "end_line": 176,
+        "start_line": 5,
+        "end_line": 24,
         "description": "Baseline metrics before taxonomy improvements.",
         "highlight": "Taxonomy lift baseline"
       },
@@ -23,8 +23,8 @@
         "repo_path": "c:/projects/proposal/rlaif-harness-traces",
         "file_path": "TRACE_HISTORY.md",
         "git_ref": "trace-v3",
-        "start_line": 104,
-        "end_line": 129,
+        "start_line": 5,
+        "end_line": 25,
         "description": "v3 taxonomy section with routing-accuracy lift and measured impact.",
         "highlight": "Taxonomy lift in v3"
       }
@@ -77,6 +77,31 @@
         "end_line": 60,
         "description": "v3 recommendation includes taxonomy lift (route_accuracy 0.4 -> 1.0).",
         "highlight": "Taxonomy recommendation evidence"
+      }
+    },
+    {
+      "pair_title": "D. System Prompt Recommendation Signal (v3 vs v7)",
+      "before": {
+        "source": "local_git",
+        "label": "Before (v3)",
+        "repo_path": "c:/projects/proposal/rlaif-harness-traces",
+        "file_path": "artifacts/recommendations.json",
+        "git_ref": "trace-v3",
+        "start_line": 410,
+        "end_line": 545,
+        "description": "v3 prompt-hat baseline (PATCH-PROMPT-v14) with consent-gate and policy-lift signals.",
+        "highlight": "Prompt baseline before AP17 hardening"
+      },
+      "after": {
+        "source": "local_git",
+        "label": "After (v7)",
+        "repo_path": "c:/projects/proposal/rlaif-harness-traces",
+        "file_path": "artifacts/recommendations.json",
+        "git_ref": "trace-v7",
+        "start_line": 565,
+        "end_line": 845,
+        "description": "v7 adds AP17-specific prompt recommendation and upgraded prompt patch (PATCH-PROMPT-v15).",
+        "highlight": "System prompt hardening evidence"
       }
     }
   ]
