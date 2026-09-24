@@ -323,12 +323,18 @@ def _generated_github_url_from_local(spec: SnapshotSpec) -> str | None:
     base = _repo_web_base(repo, spec.github_repo_base)
     if not base:
         return None
-    try:
-        full_ref = _resolve_git_ref(repo, spec.git_ref)
-    except Exception:
-        return None
+    git_ref = (spec.git_ref or "").strip()
+    # Prefer symbolic refs (tags/branches) in links for portability across remotes.
+    # Only expand to full SHA when the provided ref already looks like a SHA token.
+    if re.fullmatch(r"[0-9a-fA-F]{7,40}", git_ref):
+        try:
+            ref_for_url = _resolve_git_ref(repo, git_ref)
+        except Exception:
+            return None
+    else:
+        ref_for_url = git_ref
 
-    base = f"{base}/blob/{full_ref}/{spec.file_path}"
+    base = f"{base}/blob/{ref_for_url}/{spec.file_path}"
     if spec.start_line is not None and spec.end_line is not None:
         return f"{base}#L{spec.start_line}-L{spec.end_line}"
     if spec.start_line is not None:
