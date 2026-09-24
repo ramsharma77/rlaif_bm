@@ -5,129 +5,108 @@
     "artifacts_dir":  "output/trace_docx_artifacts_rlaif_before_after",
     "pairs":  [
                   {
-                      "pair_title":  "A. Core Engine Behavior",
+                      "pair_title":  "A. Trace History Narrative",
                       "before":  {
                                      "source":  "local_git",
                                      "label":  "Before (v1)",
                                      "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                     "file_path":  "rlaif_lab/engine.py",
+                                     "file_path":  "TRACE_HISTORY.md",
                                      "git_ref":  "trace-v1",
-                                     "description":  "Baseline behavior from trace-v1.",
-                                     "highlight":  "Engine delta"
+                                     "description":  "Baseline trace-history narrative at v1.",
+                                     "highlight":  "Narrative and governance delta"
                                  },
                       "after":  {
                                     "source":  "local_git",
                                     "label":  "After (v3)",
                                     "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                    "file_path":  "rlaif_lab/engine.py",
+                                    "file_path":  "TRACE_HISTORY.md",
                                     "git_ref":  "trace-v3",
-                                    "description":  "Updated behavior from trace-v3.",
-                                    "highlight":  "Engine delta"
+                                    "description":  "Updated trace-history narrative at v3.",
+                                    "highlight":  "Narrative and governance delta"
                                 }
                   },
                   {
-                      "pair_title":  "B. Reward and Learning Loop",
+                      "pair_title":  "B. Cycle Summary Output",
                       "before":  {
                                      "source":  "local_git",
                                      "label":  "Before (v1)",
                                      "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                     "file_path":  "rlaif_lab/rl.py",
+                                     "file_path":  "artifacts/cycle_summary.json",
                                      "git_ref":  "trace-v1",
-                                     "description":  "Baseline behavior from trace-v1.",
-                                     "highlight":  "RL delta"
+                                     "description":  "Baseline cycle summary output at v1.",
+                                     "highlight":  "Cycle summary delta"
                                  },
                       "after":  {
                                     "source":  "local_git",
                                     "label":  "After (v3)",
                                     "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                    "file_path":  "rlaif_lab/rl.py",
+                                    "file_path":  "artifacts/cycle_summary.json",
                                     "git_ref":  "trace-v3",
-                                    "description":  "Updated behavior from trace-v3.",
-                                    "highlight":  "RL delta"
+                                    "description":  "Updated cycle summary output at v3.",
+                                    "highlight":  "Cycle summary delta"
                                 }
                   },
                   {
-                      "pair_title":  "C. Judge and Evaluation Logic",
+                      "pair_title":  "C. Preference Pairs Dataset",
                       "before":  {
                                      "source":  "local_git",
                                      "label":  "Before (v1)",
                                      "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                     "file_path":  "rlaif_lab/judge.py",
+                                     "file_path":  "artifacts/preference_pairs.json",
                                      "git_ref":  "trace-v1",
-                                     "description":  "Baseline behavior from trace-v1.",
-                                     "highlight":  "Judge delta"
+                                     "description":  "Baseline preference-pair records at v1.",
+                                     "highlight":  "Preference data delta"
                                  },
                       "after":  {
                                     "source":  "local_git",
                                     "label":  "After (v3)",
                                     "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                    "file_path":  "rlaif_lab/judge.py",
+                                    "file_path":  "artifacts/preference_pairs.json",
                                     "git_ref":  "trace-v3",
-                                    "description":  "Updated behavior from trace-v3.",
-                                    "highlight":  "Judge delta"
+                                    "description":  "Updated preference-pair records at v3.",
+                                    "highlight":  "Preference data delta"
                                 }
                   },
                   {
-                      "pair_title":  "D. Policy and Rule Controls",
+                      "pair_title":  "D. Recommendation Output",
                       "before":  {
                                      "source":  "local_git",
                                      "label":  "Before (v1)",
                                      "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                     "file_path":  "rlaif_lab/policies.py",
+                                     "file_path":  "artifacts/recommendations.json",
                                      "git_ref":  "trace-v1",
-                                     "description":  "Baseline behavior from trace-v1.",
-                                     "highlight":  "Policy delta"
+                                     "description":  "Baseline recommendation output at v1.",
+                                     "highlight":  "Recommendation delta"
                                  },
                       "after":  {
                                     "source":  "local_git",
                                     "label":  "After (v3)",
                                     "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                    "file_path":  "rlaif_lab/policies.py",
+                                    "file_path":  "artifacts/recommendations.json",
                                     "git_ref":  "trace-v3",
-                                    "description":  "Updated behavior from trace-v3.",
-                                    "highlight":  "Policy delta"
+                                    "description":  "Updated recommendation output at v3.",
+                                    "highlight":  "Recommendation delta"
                                 }
                   },
                   {
-                      "pair_title":  "E. Runtime Orchestration",
+                      "pair_title":  "E. Full Verdicts Output",
                       "before":  {
                                      "source":  "local_git",
                                      "label":  "Before (v1)",
                                      "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                     "file_path":  "rlaif_lab/runtime.py",
+                                     "file_path":  "artifacts/verdicts_full.json",
                                      "git_ref":  "trace-v1",
-                                     "description":  "Baseline behavior from trace-v1.",
-                                     "highlight":  "Runtime delta"
+                                     "description":  "Baseline verdict output at v1.",
+                                     "highlight":  "Verdict delta"
                                  },
                       "after":  {
                                     "source":  "local_git",
                                     "label":  "After (v3)",
                                     "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                    "file_path":  "rlaif_lab/runtime.py",
+                                    "file_path":  "artifacts/verdicts_full.json",
                                     "git_ref":  "trace-v3",
-                                    "description":  "Updated behavior from trace-v3.",
-                                    "highlight":  "Runtime delta"
-                                }
-                  },
-                  {
-                      "pair_title":  "F. Registry and Tool Mapping",
-                      "before":  {
-                                     "source":  "local_git",
-                                     "label":  "Before (v1)",
-                                     "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                     "file_path":  "rlaif_lab/registry.py",
-                                     "git_ref":  "trace-v1",
-                                     "description":  "Baseline behavior from trace-v1.",
-                                     "highlight":  "Registry delta"
-                                 },
-                      "after":  {
-                                    "source":  "local_git",
-                                    "label":  "After (v3)",
-                                    "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                    "file_path":  "rlaif_lab/registry.py",
-                                    "git_ref":  "trace-v3",
-                                    "description":  "Updated behavior from trace-v3.",
-                                    "highlight":  "Registry delta"
+                                    "description":  "Updated verdict output at v3.",
+                                    "highlight":  "Verdict delta"
                                 }
                   }
               ]
