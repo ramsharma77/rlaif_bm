@@ -1,113 +1,83 @@
 {
-    "document_title":  "RLAIF Harness Before vs After - What Changed and Why",
-    "github_repo_base":  "https://github.com/ramsharma77/rlaif_bm",
-    "output_docx":  "output/rlaif_before_after.docx",
-    "artifacts_dir":  "output/trace_docx_artifacts_rlaif_before_after",
-    "pairs":  [
-                  {
-                      "pair_title":  "A. Trace History Narrative",
-                      "before":  {
-                                     "source":  "local_git",
-                                     "label":  "Before (v1)",
-                                     "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                     "file_path":  "TRACE_HISTORY.md",
-                                     "git_ref":  "trace-v1",
-                                     "description":  "Baseline trace-history narrative at v1.",
-                                     "highlight":  "Narrative and governance delta"
-                                 },
-                      "after":  {
-                                    "source":  "local_git",
-                                    "label":  "After (v3)",
-                                    "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                    "file_path":  "TRACE_HISTORY.md",
-                                    "git_ref":  "trace-v3",
-                                    "description":  "Updated trace-history narrative at v3.",
-                                    "highlight":  "Narrative and governance delta"
-                                }
-                  },
-                  {
-                      "pair_title":  "B. Cycle Summary Output",
-                      "before":  {
-                                     "source":  "local_git",
-                                     "label":  "Before (v1)",
-                                     "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                     "file_path":  "artifacts/cycle_summary.json",
-                                     "git_ref":  "trace-v1",
-                                     "description":  "Baseline cycle summary output at v1.",
-                                     "highlight":  "Cycle summary delta"
-                                 },
-                      "after":  {
-                                    "source":  "local_git",
-                                    "label":  "After (v3)",
-                                    "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                    "file_path":  "artifacts/cycle_summary.json",
-                                    "git_ref":  "trace-v3",
-                                    "description":  "Updated cycle summary output at v3.",
-                                    "highlight":  "Cycle summary delta"
-                                }
-                  },
-                  {
-                      "pair_title":  "C. Preference Pairs Dataset",
-                      "before":  {
-                                     "source":  "local_git",
-                                     "label":  "Before (v1)",
-                                     "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                     "file_path":  "artifacts/preference_pairs.json",
-                                     "git_ref":  "trace-v1",
-                                     "description":  "Baseline preference-pair records at v1.",
-                                     "highlight":  "Preference data delta"
-                                 },
-                      "after":  {
-                                    "source":  "local_git",
-                                    "label":  "After (v3)",
-                                    "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                    "file_path":  "artifacts/preference_pairs.json",
-                                    "git_ref":  "trace-v3",
-                                    "description":  "Updated preference-pair records at v3.",
-                                    "highlight":  "Preference data delta"
-                                }
-                  },
-                  {
-                      "pair_title":  "D. Recommendation Output",
-                      "before":  {
-                                     "source":  "local_git",
-                                     "label":  "Before (v1)",
-                                     "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                     "file_path":  "artifacts/recommendations.json",
-                                     "git_ref":  "trace-v1",
-                                     "description":  "Baseline recommendation output at v1.",
-                                     "highlight":  "Recommendation delta"
-                                 },
-                      "after":  {
-                                    "source":  "local_git",
-                                    "label":  "After (v3)",
-                                    "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                    "file_path":  "artifacts/recommendations.json",
-                                    "git_ref":  "trace-v3",
-                                    "description":  "Updated recommendation output at v3.",
-                                    "highlight":  "Recommendation delta"
-                                }
-                  },
-                  {
-                      "pair_title":  "E. Full Verdicts Output",
-                      "before":  {
-                                     "source":  "local_git",
-                                     "label":  "Before (v1)",
-                                     "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                     "file_path":  "artifacts/verdicts_full.json",
-                                     "git_ref":  "trace-v1",
-                                     "description":  "Baseline verdict output at v1.",
-                                     "highlight":  "Verdict delta"
-                                 },
-                      "after":  {
-                                    "source":  "local_git",
-                                    "label":  "After (v3)",
-                                    "repo_path":  "c:/projects/proposal/rlaif-harness-traces",
-                                    "file_path":  "artifacts/verdicts_full.json",
-                                    "git_ref":  "trace-v3",
-                                    "description":  "Updated verdict output at v3.",
-                                    "highlight":  "Verdict delta"
-                                }
-                  }
-              ]
+  "document_title": "RLAIF Harness Before vs After - What Changed and Why",
+  "github_repo_base": "https://github.com/ramsharma77/rlaif_bm",
+  "output_docx": "output/rlaif_before_after.docx",
+  "artifacts_dir": "output/trace_docx_artifacts_rlaif_before_after",
+  "pairs": [
+    {
+      "pair_title": "A. Taxonomy Lever Outcome (v1 vs v3)",
+      "before": {
+        "source": "local_git",
+        "label": "Before (v1)",
+        "repo_path": "c:/projects/proposal/rlaif-harness-traces",
+        "file_path": "TRACE_HISTORY.md",
+        "git_ref": "trace-v1",
+        "start_line": 153,
+        "end_line": 176,
+        "description": "Baseline metrics before taxonomy improvements.",
+        "highlight": "Taxonomy lift baseline"
+      },
+      "after": {
+        "source": "local_git",
+        "label": "After (v3)",
+        "repo_path": "c:/projects/proposal/rlaif-harness-traces",
+        "file_path": "TRACE_HISTORY.md",
+        "git_ref": "trace-v3",
+        "start_line": 104,
+        "end_line": 129,
+        "description": "v3 taxonomy section with routing-accuracy lift and measured impact.",
+        "highlight": "Taxonomy lift in v3"
+      }
+    },
+    {
+      "pair_title": "B. Routing Behavior Evidence (verdicts)",
+      "before": {
+        "source": "local_git",
+        "label": "Before (v1)",
+        "repo_path": "c:/projects/proposal/rlaif-harness-traces",
+        "file_path": "artifacts/verdicts_full.json",
+        "git_ref": "trace-v1",
+        "start_line": 660,
+        "end_line": 860,
+        "description": "v1 shows repeated billing_explainer misroutes in rationale/path evidence.",
+        "highlight": "Misroute pattern before taxonomy"
+      },
+      "after": {
+        "source": "local_git",
+        "label": "After (v3)",
+        "repo_path": "c:/projects/proposal/rlaif-harness-traces",
+        "file_path": "artifacts/verdicts_full.json",
+        "git_ref": "trace-v3",
+        "start_line": 240,
+        "end_line": 460,
+        "description": "v3 shows improved route selection (including due_date_changer where appropriate).",
+        "highlight": "Routing corrected by taxonomy"
+      }
+    },
+    {
+      "pair_title": "C. Taxonomy Recommendation Signal",
+      "before": {
+        "source": "local_git",
+        "label": "Before (v1)",
+        "repo_path": "c:/projects/proposal/rlaif-harness-traces",
+        "file_path": "artifacts/recommendations.json",
+        "git_ref": "trace-v1",
+        "start_line": 1,
+        "end_line": 40,
+        "description": "Baseline recommendation state before richer taxonomy evidence.",
+        "highlight": "Recommendation baseline"
+      },
+      "after": {
+        "source": "local_git",
+        "label": "After (v3)",
+        "repo_path": "c:/projects/proposal/rlaif-harness-traces",
+        "file_path": "artifacts/recommendations.json",
+        "git_ref": "trace-v3",
+        "start_line": 1,
+        "end_line": 60,
+        "description": "v3 recommendation includes taxonomy lift (route_accuracy 0.4 -> 1.0).",
+        "highlight": "Taxonomy recommendation evidence"
+      }
+    }
+  ]
 }

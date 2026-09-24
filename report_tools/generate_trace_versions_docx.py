@@ -777,13 +777,17 @@ async def _capture_all_pairs(pairs: list[PairSpec], artifacts_dir: Path) -> list
             and pair.after.git_ref
         ):
             repo = Path(pair.before.repo_path)
-            ranges = _primary_hunk_ranges(repo, pair.before.file_path, pair.before.git_ref, pair.after.git_ref)
-            if ranges is not None:
-                (b_lo, b_hi), (a_lo, a_hi) = ranges
-                pair.before.start_line = b_lo
-                pair.before.end_line = b_hi
-                pair.after.start_line = a_lo
-                pair.after.end_line = a_hi
+            # If config already pins line windows, keep them. Otherwise auto-focus on the primary hunk.
+            before_pinned = pair.before.start_line is not None or pair.before.end_line is not None
+            after_pinned = pair.after.start_line is not None or pair.after.end_line is not None
+            if not before_pinned and not after_pinned:
+                ranges = _primary_hunk_ranges(repo, pair.before.file_path, pair.before.git_ref, pair.after.git_ref)
+                if ranges is not None:
+                    (b_lo, b_hi), (a_lo, a_hi) = ranges
+                    pair.before.start_line = b_lo
+                    pair.before.end_line = b_hi
+                    pair.after.start_line = a_lo
+                    pair.after.end_line = a_hi
 
             # Always force precise permalink generation from local refs to avoid stale URLs.
             before_url = _generated_github_url_from_local(pair.before)

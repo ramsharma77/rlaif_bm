@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+from datetime import datetime
 from pathlib import Path
 
 from docx import Document
@@ -104,9 +105,15 @@ def main() -> None:
     _add_cover(out_doc)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_doc.save(str(out_path))
-
-    print(str(out_path))
+    try:
+        out_doc.save(str(out_path))
+        print(str(out_path))
+    except PermissionError:
+        fallback = out_path.with_name(
+            f"{out_path.stem}_{datetime.now().strftime('%Y%m%d_%H%M%S')}{out_path.suffix}"
+        )
+        out_doc.save(str(fallback))
+        print(str(fallback))
 
 
 if __name__ == "__main__":
